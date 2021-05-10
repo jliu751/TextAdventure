@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+  body{
+    background-color:red;
+  }
+  #title{
+    color: #ffffff;
+  }
+  intro{
+    color: #ffffff;
+  }
+</style>
+<script>
+  function saveage(){
+    var x = document.getElementById("age").value;
+    window.localStorage.setItem('userName', x);
+  }
+  function newPage()
+  {
+      window.location.href = "TextAdventure2.html"
+  }
+  function tricks()
+  {
+      var log = "";
+       var score = 0;
+       while (score < 10)
+       {
+         score++;
+         log = log +"Trick = " +  score + "<br>";
+       }
+       document.getElementById('Trickcount').innerHTML = log;
+  }
+</script>
+</head>
+<body>
+<h1 id="title">The adventures of Haruto and the board that never left.<h1>
+  <hr>
+<p id="intro">This story follows the tale of Haruto, a skateboarder from Japan who never had anyone to share his passion with. With that being said, that might change here very soon...</p>
+<br><br>
+<img src="harutopic.jpg" height="50%" width="50%" id="Harutopic" onMouseOver = "newPage()">
+<br><br>
+<p>But before we continue, Haruto would like to know your age.</p>
+<p>Answer and click on save. Then hover on the picture of Haruto to continue.</p>
+<input type="text" id="age">
+<input type="button" value="Save" onclick="saveage()">
+<br><br>
+<p id="Trickcount">Trickcounter:</p>
+</body>
+</html>

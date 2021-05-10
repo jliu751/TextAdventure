@@ -1,0 +1,61 @@
+<html>
+   <head>
+    <style>
+     body{
+       background-color:red;
+     }
+     h1{
+       color: #ffffff;
+     }
+     welcome{
+       color: #ffffff;
+     }
+     hidesent{
+       visibility: hidden;
+     }
+   </style>
+      <script>
+          function getage()
+          {
+            var x = window.localStorage.getItem('userName');
+            document.getElementById("welcome").innerHTML = x;
+          }
+         function page3()
+         {
+           window.location.href = "TextAdventure3.html"
+         }
+        function page4()
+        {
+          window.location.href = "TextAdventure4.html"
+        }
+
+      </script>
+   </head>
+   <body>
+
+
+      <h1>Welcome to shinjuku.</h1>
+      <hr><br><br>
+      <p>Shinjuku is a mecca for japanese skateboarding, with its smooth roads, city lights, and the best spots.</p>
+      <img src="shinjuku.jpg" height="25%" width="25%">
+      <p>Click the button below to learn haruto's age.</p>
+      <p id = "welcome"></p>
+      <input type = "button" value = "See age" onclick = "getage()">
+      <p id="hidesent">Wow! you and Haruto are the same age, what a coincidence!</p>
+      <p>continue scrolling.</p>
+
+      <br><br><br><br>
+      <br><br><br><br>
+      <br><br><br><br>
+      <img src="ShinjukuNight.jpg" height="25%" width="25%">
+      <br><br><br><br>
+      <br><br><br><br>
+      <br><br><br><br>
+      <br><br><br><br>
+      <p>Now that you and Haruto are acquantited, he wants to skate. Where are we headed?</p>
+      <p>hover over which picture/spot that you would like to skate.</p>
+      <br><br>
+      <img src = "Japanwavespot.jpg" height="25%" width="25%" onMouseOver="page3()">
+      <img src= "skatepark.jpg" height="25%" width="25%" onMouseOver= "page4()">
+   </body>
+</html>
